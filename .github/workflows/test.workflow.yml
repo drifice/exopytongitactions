@@ -15,8 +15,6 @@ jobs:
         run: pip install -r requirements.txt
       - name: Run tests
         run: pytest
-        if: ${{ failure() }}
-        uses: exit1()
       - name: Check on fail
         if: ${{ failure() }}
         uses: dacbd/create-issue-action@main
